@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Other Bug Hunter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Other Bug Hunters</h2>
+  <i><p style="font-size: x-large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">We do hunt, and We do fish, and  We don't apologize to anybody for hunting and fishing.</p> </i>           
+  <a href="/dashboard">Back To Dashboard</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>USERNAME</th>
+        <th>RANK</th>
+        <th>EMAIL</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% ran.reverse().forEach(function(c){ %> 
+      <tr>
+        <td><%=c.username %></td>
+        <td><%=c.total %></td>
+        <td><%=c.email %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid black;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body> 
+<h1>Steganography CHALLANGES FOR YOU</h1>
+    
+    <% result.forEach(function(cr){ %>
+        <section style="width: 90%;height: auto;">
+            <form action="/ctf/ctf/solution" method="POST">
+                <div style="background-color:rgb(204, 237, 247);margin-bottom: 20px;border-left : 25px solid skyblue;border-right : 5px solid skyblue;padding: 5px; width: 90%;" >
+
+                 <input type="text" id="id" name="id"   style="font-weight: bold; color:black; font-size: 15px;margin-right: 10px;float: right;width: 30px; background-color: transparent; border:0px solid transparent; "  value="<%= cr.id %>" > <label style="float: right;">ID:</label> <br>
+                        <h1>  <%= cr.name %>  <span style="float: right;font-size: 20px;margin-right: 10px;">Point:<%= cr.point %></span> <span style="font-size: 20px;float: right;margin-right: 10px;"> Level:<%=  cr.level %> </span><span style="font-size: 20px;float: right;margin-right: 10px;"> Type:<%=  cr.type %></span></h1>
+                <p style=" width:100%; "><%=  cr.description %> </p>  
+                <a href="  <%= cr.link %>">  <%= cr.link %></a><br><br>
+               
+                    
+                    <label>KEY :</label>&nbsp;<input type="text" id="key" name="key" placeholder="key formate TBH{Hackerhram}" style="width: 900px;height: 20px;padding: 5px;" required>&nbsp;<input   type="submit" value="BUGH HUNT" style="height: 33px;width: 100px;padding: 2px;">
+                </form>
+
+
+                
+                      </div>
+        </section>
+        <% }) %>
+        
+
+        <div style="width: 200px;height: auto;float: right;background-color:white;position: absolute;top: 60px;right: 20px;">
+        <h3 style="background-color: black;color: white;padding: 5px;">RECENTLY HUNTED </h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>SCORE</th>
+            </tr>
+            <% resu.reverse().forEach(function(c){ %>
+                <tr>
+                    <th><%= c.id %> </th>
+                    <th><%= c.score %></th>
+                 </tr>
+           
+            <% }) %>
+
+        </table> 
+        </div>
+        <a href="/result">see Result</a>
+
+
+        
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <h1 style="text-align: center;"> CHALLANGES</h1>
+<h4>Upload new challange</h4><a  style="float: right; margin-top: -50px;margin-right:100px ;" href="/logout">logout</a>
+    <section style="border: 2px solid #000000;padding:5px; align-items: center;">
+        <img src="/crypto.svg" alt="crypto" style="float: right;margin-top: 80px; margin-right: 80px;">
+       
+        <form  method="POST" name="crypto" action="/admin/ctf/crypto/crypto">
+            <h1>Type of challange</h1>
+            <select name="type" id="type">
+                <option >--select type--</option>
+                <option value="Cryptography">Cryptography</option>
+                <option value="SQL Injection">SQL Injection</option>
+                <option value="Cross-site Scripting (XSS)">Cross-site Scripting (XSS)</option>
+                <option value="Steganography ">Steganography </option>
+                <option value="Cyber forensics">Cyber forensics</option>
+                <option value="Network Security">Network Security</option>
+            </select>
+            <h3>Name</h3>
+            <input type="text" name="name" id="name" style="width:950px;height: 30px;">
+                <h3>Discription  about the challange</h3>
+            <textarea name="description" id="description" cols="150" rows="5">DISCRIPTION HERE</textarea><br>
+            <span style="font-size: 20px;">Point</span><input type="number" name="point" id="point">  <span style="font-size: 20px;">Level</span>
+             <select name="level" id="level">
+                <option>--select--</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <h3>KEY</h3>
+            <input type="text" name="key" id="key" style="width:950px;height: 30px;">
+            <h3>Url of the challange</h3>
+            <input type="text" name="link" id="link" style="width:950px;height: 30px;">&nbsp;&nbsp;<input  style="width:100px;height: 40px;" type="submit" value="submit">
+         </form>
+
+
+    </section>
+    <section>
+        <a href="/all/crypto">see all challanges</a><br>
+        
+    </section>
+  
+</body>
+</html>

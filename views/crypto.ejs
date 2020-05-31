@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <h1 style="text-align: center;"> ALL CHALLENGES</h1>
+  
+
+    
+    <section style="float: right;">
+        <form action="#"  >
+        <select name="show" id="show">
+            <option value="All">All</option>
+            <option value="Cryptography">Cryptography</option>
+            <option value="SQL Injection">SQL Injection</option>
+            <option value="Cross-site Scripting (XSS)">Cross-site Scripting (XSS)</option>
+            <option value="Steganography ">Steganography </option>
+            <option value="Cyber forensics">Cyber forensics</option>
+            <option value="Network Security">Network Security</option>
+        </select><br>
+        <input type="submit" name="submit" id="submit" value="Show By">
+
+        </form><br>
+        <a href="/logout">logout</a>
+    </section>
+
+   
+            <% cryp.forEach(function(cr){ %>
+                <section style="width: 90%;height: auto;">
+
+                        <div style="background-color:rgb(204, 237, 247);margin-bottom: 20px;border-left : 25px solid skyblue;border-right : 5px solid skyblue;padding: 5px; width: 90%;" >
+                                <h1>  <%= cr.name %>  <span style="float: right;font-size: 20px;margin-right: 10px;">Point:<%= cr.point %></span> <span style="font-size: 20px;float: right;margin-right: 10px;"> Level:<%=  cr.level %> </span><span style="font-size: 20px;float: right;margin-right: 10px;"> Type:<%=  cr.type %> </span></h1>
+                        <p style=" width:100%; "><%=  cr.description %> </p>  
+                        <a href="  <%= cr.link %>">  <%= cr.link %></a><br>
+                       <h3>key:<%= cr.mykey %></h3>
+                                
+                          
+                              </div>
+                </section>
+                <% }) %>
+   
+</body>
+</html>

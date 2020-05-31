@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    
+    <title>Registration</title>
+    <style>
+    #heading{
+      position: absolute;
+      right: 13%;
+      top: 15%;
+      color: white;
+    }
+    #forming{
+      position: absolute;
+      right: 10%;
+      top: 32%;
+      
+
+    }
+    input{
+      width: 310px;
+      height: 30px;
+     
+    }
+    #register{
+    position:absolute;
+    right: 1%;
+    width: 310px;
+      height: 38px;
+      border: 2px solid red; 
+      font-size: 16px;
+      background-color: black;
+      color: wheat;
+    }
+    #register:hover{
+      border: 2px solid rgb(202, 184, 184);
+      background-color: black;
+      color: wheat;
+     
+    }
+    #qoute{
+      color:white;
+      font-size: 37px;
+      position: absolute;
+      bottom: -0.2%;
+      left: 100px;
+      z-index: 11;
+     }
+    </style>
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;   background-image: url('banne.jpg');background-size:cover;background-repeat: no-repeat; background-color: red;">
+   
+  <h1 id="heading">Registration form</h1>
+    <form  id="forming"  name="registration" method="post"  action="/submit">
+    <input type="text" id="username" name="username" placeholder="Username" required><br><br><br>
+    <input type="email" name="email" id="email" placeholder="abc@gmail.com" required><br><br><br>
+    <input type="password" name="password" id="password" placeholder="password" required><br><br><br>
+    <input type="phone" id="phone" name="phone" placeholder="910000000" required ><br><br><br>
+    <input type="submit"  id="register"  value="Register" ><br><br><br>
+    </form>
+
+ <span id="qoute"><i> Never underestimate the determination of a kid who is time-rich and cash-poor.</i></span>
+
+    
+</body>
+</html>
+
+

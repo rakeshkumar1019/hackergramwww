@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HACKERGRAM::UpdateProfile</title>
+</head>
+<body> 
+    <a href="/dashboard">back to dashboard</a>
+               
+    <div class="login-form">
+        <h1>Update Profile</h1>
+        <form action="/updateprofileusername" method="POST">
+            <label for="username">username</label> <input type="text" name="username" placeholder="Username"  ><br>
+            <input type="submit">
+       </form>
+
+       <form action="/updateprofileemail" method="POST">
+        <label for="email">email</label><input type="email" name="email" placeholder="email"  ><br>
+        <input type="submit">
+       </form>
+
+
+   <form action="/updateprofilepassword" method="POST">
+  <label for="password">password</label><input type="password" name="password" placeholder="Password"  ><br>
+ <input type="submit">
+</form>
+
+<form action="/updateprofilephone" method="POST">
+ <label for="phone">phone</label> <input type="phone" name="phone" placeholder="phone"  ><br>
+   <input type="submit">
+</form>
+    </div>       
+                  
+     
+                   
+             
+    
+</body>
+</html>

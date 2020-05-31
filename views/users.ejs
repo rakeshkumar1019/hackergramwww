@@ -1,0 +1,305 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>HACKERGRAM:dashboard</title>
+     <script src="qrcode.js"></script>
+     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <style>
+            body {
+              margin: 0;
+              padding: 0;
+              background-color:rgb(227, 240, 240);
+              max-height: 1300px;
+            }
+            
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              width: 15%;
+              background-color:#4f626e;   
+              position: fixed;
+              height: 100%;
+              font-size: 18px;
+              overflow: auto;
+            }
+            
+            li a {
+              display: block;
+              color: white;
+              padding: 8px 16px;
+              text-decoration: none;
+            }
+            li a:not(.logo-top):hover{
+                opacity: 0.7;
+            }
+
+            #box-1{
+                background-color: red;
+                height: 22px;
+                width: 22px;
+                font-size: 22px;
+                color: white;
+                position: absolute;
+                left: 18px;
+                top: 15px;
+            }
+            .logo-top{
+                 border: 5px solid #000203;
+                 background-color: #000203;
+             }
+            #logo{
+                font-size: 24px;
+                font-weight: bold;
+            }
+            #server{
+                font-size: 15px;
+                padding-left: 16px;
+                color:white;
+            }
+            .space{
+                background-color: red;
+                height: 30px;
+                width: 8px;
+                position: absolute;
+                top: 139px;
+            }
+            .boder{
+                border: 1px solid gray;
+                padding:15px;
+            }
+            #line-1{
+                font-size: 13px;
+                color: white; 
+            }
+            #logo-2{
+                font-size: 80px;
+                font-weight: bold;
+                position: absolute;
+                top: 100px;
+                left: 250px;
+            }
+            #box-2{ 
+                font-size: 82px;
+                background-color: red;
+                position: absolute;
+                top: 100px;
+                left: 250px;
+            }
+            #username{
+                font-size: 18px;
+                text-decoration: none;
+                color: red;
+                float: right;
+                margin: 14px 0px;
+
+            }
+            #line-qoute-1{
+                color: black;
+                font-size: 17px;
+                position: absolute;
+                top: 210px;
+                left: 250px;
+            }
+            .change{
+                padding-left: 10px;
+                font-size: 15px;
+            }
+            .change2{
+                 float: right;
+                font-size: 15px;
+
+            }
+
+.dropbtn {
+  background-color:transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  position: absolute;
+  left: 820px;
+  top:-10px;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+top: 40px;
+  position: absolute;
+  left: 830px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:transparent;}
+ 
+
+       th{
+         border: 1px solid white;
+       }     
+            </style>
+ </head>
+ <body style="font-family: 'Times New Roman', Times, serif;">
+    <ul>
+        <li><a class="logo-top" href="/"><span id="box-1">&nbsp;H&nbsp;</span><span id="logo">Hackergram <sup style="font-size: 12px;">TM</sup></span></a></li><br><br>
+        <span id="server">Server: <span style="color:red;"> localhost Free 1</span></span><br><br>
+        <span class="space">&nbsp;&nbsp;</span> <li><a href="/dashboard"> Dashboard</a></li>
+        <li><a href="/other">Other</a></li><br>
+        <li><a class="boder" href="/education"><i style='font-size:15px' class='fas'>&#xf19d;</i> &nbsp;&nbsp;Education</a></li>
+        <li><a class="boder" href="/result"><i style='font-size:15px' class='fas'>&#xf0f0;</i> &nbsp;&nbsp;Result</a></li>
+        <li><a class="boder" href="/ranking"><i style="font-size:15px" class="fa">&#xf1fe;</i>&nbsp;&nbsp;Rankings</a></li>
+        <li><a class="boder" href="/member"><i style="font-size:15px" class="fa">&#xf0c0;</i> &nbsp;&nbsp;Members</a></li>
+        <br><br><br><br><br><br>
+        <span id="line-1">Hackergram is an online platform allowing you to test and advance your skills in cyber security. Use it responsibly and don't hack your fellow members...</span> 
+    </ul>    
+    <div style="z-index: 10; margin-left:15%;padding:1px 16px;height:51px;position: fixed;width:85%; background-color:#4f626e;">
+      <a href="logout"><i style="font-size:24px;color: black;float: right;padding: 11px 50px;" class="fa">&#xf13e;</i></a>
+    
+       <div class="dropdown">
+        <button class="dropbtn"> <span style="color: black;">User:</span>&nbsp;<%=result.username%><i class='fas fa-caret-down' style='font-size:48px;color:black'></i> </button>
+        <div class="dropdown-content">
+                <a href="#">Id:<%=result.id%></a>
+          <a href="#">Email:<%=result.email%></a>
+          <a href="#">Phone:<%=result.phone%></a>
+          <a href="/updateprofileimage">Update Profile Image</a>
+          <a href="/updateprofile">Update Profile</a>
+          
+        </div>
+      </div>
+      <img src="<%= result.imagesrc %>" alt="profilepicture" style="height: 45px;width:45px;overflow:hidden;border-radius: 50%;float:right;align-items: center;justify-items: center;">
+      
+    </div>      
+    <div style="margin-left:15%;padding:1px 16px;height:1000px;z-index: -10;">
+        <span id="box-2">&nbsp;&nbsp;&nbsp;</span><span id="logo-2">Hackergram <sup style="font-size: 12px;">TM</sup></span>
+        <span id="line-qoute-1">Hackergram is an online platform allowing you to test and advance your skills in cyber security. Use it responsibly and don't hack your fellow members...</span>
+    </div>
+    <div id="#" style="width:300px;background-color:white;">
+     <p style="color: white; background-color:black;width: 202px; font-weight: bold; font-size: 20px; position: absolute;top: 42%;left: 1050px;padding: 5px;"><i style='font-size:24px' class='fas'>&#xf0c0;</i>&nbsp;&nbsp;Members</p>
+    <ul style="padding-left:10px; height: 210px; background-color:black; position: absolute;left: 1050px;top: 50.0%;font-size: 17px;color:white;">
+        <% rows.forEach(function(row){ %>
+          <li><%= row.username %></li>
+        <% }) %>
+    </ul>
+   
+     <p style=" width: 150px;height: 100px; font-weight: bold;background-color:black;   position: absolute;top: 42%;left: 700px;"> 
+        <i style='font-size:50px;color:rgb(247, 217, 217);padding: 10px;' class='fas'>&#xf505;</i> <span style="font-size: 40px;color: greenyellow;"><%= rows1  %> </span><br>
+       <span style="font-size: 20px;color: white;padding-left: 5px;">Total Members</span>  
+    </p>
+    <p style=" width: 150px;height: 100px; font-weight: bold;background-color:black;   position: absolute;top: 42%;left: 870px;"> 
+      <i style='font-size:50px;color:rgb(247, 217, 217);padding: 10px;' class='fas'>&#xf188;</i> <span style="font-size: 40px;color: greenyellow;"> <%= counter %></span><br>
+     <span style="font-size: 20px;color: white;padding-left: 5px;">Total Bugs</span>  
+  </p>
+
+  <p style=" width: 150px;height: 100px; font-weight: bold;background-color:black;   position: absolute;top:60px;left: 1000px;"> 
+    <i style='font-size:50px;color:rgb(247, 217, 217);padding: 10px;' class='fas'>&#xf505;</i> <span style="font-size: 30px;color: greenyellow;"><%= summ  %> </span><br>
+   <span style="font-size: 20px;color: white;padding-left: 5px;">Your Bounty</span>  
+</p>
+  <span style="color: black;font-size: 20px; position: absolute;left:750px; top:62.0%; font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">TOP BUG HUNTER </span>
+
+  <table style="border: 1px solid white; height: 110px; width:320px; background-color:black; position: absolute;left: 700px;top: 66.0%;font-size: 12px;color:white;">
+   
+    <tr style="background-color:white;color: black; font-size: 18px;">
+        <th >Username</th >
+       <th>Bounty</th>
+       <th>Email</th>
+        </tr>
+  
+        <% rank.forEach(function(r){ %>
+          <tr  style="background-color:black;">
+            <th><%= r.username %> </th>
+            <th><%= r.total %> </th> 
+            <th><%= r.email %> </th> 
+          </tr>
+        <% }) %>
+           
+   
+ 
+ 
+  
+  
+   
+      
+    
+      
+    
+</table>
+
+    <div style="color: white; padding: 10px;  position: absolute;top:45%;left:20%;width: 400px;height: 230px; background-color:black; ">
+    <i style='font-size:20px;color: white;' class='fas'>&#xf0ac;</i><span style= " font-size: 15px;font-weight: bold;">&nbsp;&nbsp;VPN Origins</span> <br><br>
+    <img  style="  height: 20px;width:20px;" src="india.svg" alt="india-flag"><span class="change" >India</span> <span class="change2">32.24%</span> <br>
+    <img  style="height: 20px;width:20px;" src="usa.svg" alt="usa-flag"><span class="change" >United States</span><span class="change2">8.17%</span><br>
+    <img  style="height: 20px;width:20px;" src="russia.svg" alt="russia-flag"><span class="change">Russia</span><span class="change2">5.63%</span><br>
+    <img  style="height: 20px;width:20px;" src="israil.svg" alt="israil-flag"><span class="change">Israel</span><span class="change2">4.18%</span><br>
+    <img  style="height: 20px;width:20px;" src="spain.svg" alt="spain-flag"><span class="change">Spain</span><span class="change2">3.81%</span><br>
+    <img  style="height: 20px;width:20px;" src="france.svg" alt="france-flag"><span class="change">France</span><span class="change2">3.54%</span><br>
+    <img  style="height: 20px;width:20px;" src="germany.svg" alt="germany-flag"><span class="change" >Germany</span><span class="change2">3%</span><br>
+    <img  style="height: 20px;width:20px;" src="netherlands.svg" alt="netherlands-flag"><span class="change" >Netherlands</span><span class="change2">2.72%</span><br>
+    </div>
+      
+    <div id="test" style="position: absolute;left:1200px; top:60px;"></div>
+    <span style="color: black;font-size: 20px; position: absolute;left:1200px; top:160px;font-family: bold;">Know More </span>
+   
+<img src="pentest1.png" alt="pentest" style="height: 400px;width: 1000px; position: absolute;left:250px; top:670px;">
+
+<img src="inv.gif"  alt="hack.png" style="height: 300px;width: 300px;border-radius: 50%;  position: absolute;left:960px; top:1160px;">
+<span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold;  position: absolute;left:250px; top:1210px; font-size:60px;color:black; ">TAKE CHALLENGE</span>
+<a href="/challenge" id="last-butt" style="z-index: 100; padding: 10px 40px; background-color: black; color:white; font-size: 18px; text-decoration: none; position: absolute;left:250px; top:1290px;">NOW</a>
+<h1 style="position: absolute;left:600px; top:1410px;">&nbsp;&nbsp;&nbsp;</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script>
+ var qrcode = new QRCode("test", {
+    text: " https://rakeshkumar1019.github.io/THEBUGHUNT/",
+    width: 100,
+    height: 100,
+    colorDark : "black",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+ </script>
+
+     
+ </body>
+ </html>
