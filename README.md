@@ -21,6 +21,8 @@ open Terminal and Run
 
 $node app.js
 
+For a column with a scroll, overflow is always set to auto, for a column without scroll, it's hidden.
+
 
 
 
